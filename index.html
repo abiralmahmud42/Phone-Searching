@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+      rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h2 class="text-6xl m-10 text-center ">Phone Searching</h2>
+    </header>
+
+    <main class="container mx-auto mt-5">
+      <section class="p-4 my-4 bg-gray-200 rounded-md">
+        <input id="search-field" type="text" placeholder="Search"
+          class="input input-bordered w-full max-w-xs" />
+        <button onclick="handleSearch()"
+          class="btn btn-accent mx-5">Search</button>
+      </section>
+      <section>
+        <div id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-5">
+          <!-- show all button -->
+          <div id="show-all" class="hidden">
+            <button class="btn btn-primary">Load All</button>
+          </div>
+        </div>
+      </section>
+      <!-- show details modal -->
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- Open the modal using ID.showModal() method -->
+      <button class="btn" onclick="show_details_modal.showModal()">open modal</button>
+      <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 id="show-detail-phone-name" class="font-bold text-3xl px-5 pb-5">Hello!</h3>
+          <div class="px-5 text-blue-500" id="show-detail-container"> 
+
+          </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+            
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
